@@ -1,0 +1,427 @@
+/* Universal Styles */
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Nav */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 1.5rem 0; /* Bar Nav Height */
+  border-bottom: solid 1px #c6c1c1;
+  background-color: white;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+}
+
+/* Desktop Nav Bar */
+
+header .content {
+  display: flex;
+  align-items: center;
+}
+
+header .desktop ul {
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+/* Fotomatic */
+header .logo {
+  font-size: 1.5rem;
+  flex: 1 1 0%;
+}
+
+nav a {
+  font-size: 1rem;
+  color: #4a4a4a;
+
+  /* Align icons with text */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Instagram */
+header .icon {
+  width: 1rem;
+}
+
+/* Tablet & Mobile Nav Bar */
+header .mobile {
+  width: 100%;
+}
+
+header .mobile ul {
+  justify-content: space-evenly;
+}
+
+/* Join Mobile Button */
+nav .button {
+  color: white;
+  background-color: #9dc20b;
+  padding: .1875rem .5rem;
+  border-radius: .25rem;
+}
+
+header .desktop, .email {
+  display: none;
+}
+
+@media screen and (min-width: 769px) {
+  header .mobile {
+    display: none;
+  }
+
+  header .desktop, .email {
+    display: unset;
+  }
+
+  header {
+    padding: 1.5rem 0; /* Bar Nav Height */
+  }
+
+  /* Desktop Nav Bar */
+  header .content {
+    margin: 0 1.875rem;
+  }
+}
+
+/* Sign Up Section */
+
+#sign-up-section {
+  background-image: url(images/banner-landingpage.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 20rem;
+
+  /* Center text in relation to the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-center {
+  text-align: center;
+}
+
+.banner-text-overlay .cursive, .striking {
+  color: white;
+  font-weight: 100;
+  margin: 0;
+}
+
+/* Instant */
+.banner-text-overlay .cursive {
+  font-family: "Damion", cursive;
+  font-size: 2rem;
+}
+
+/* Format Camera */
+.banner-text-overlay .striking {
+  font-family: "Rubik", sans-serif;
+  font-size: 2.25rem;
+}
+
+/* Tablet */
+@media screen and (min-width: 426px) {
+  #sign-up-section {
+    /* Background Image Height */
+    min-height: 32rem;
+  }
+}
+
+/* Laptop */
+
+@media screen and (min-width: 769px) {
+  
+  #sign-up-section {
+    /* Background Image Height */
+    min-height: 30rem;
+
+    /* Align to the left */
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2rem;
+  }
+
+  .banner-container {
+    background-color:  #9dc20a;
+    border-radius: .25rem;
+    padding: 0 5rem 2.5rem 5rem;
+  }
+
+  .content-center {
+    margin-top: 2rem;
+    width: 25.625rem;
+    line-height: 1.4;
+  }
+
+  .banner-text-overlay .cursive {
+    font-size: 2.25rem;
+  }
+
+  .banner-text-overlay .striking {
+    font-size: 3.125rem;
+  }
+
+  .email {
+    color: white;
+    font-size: 1.25rem;
+    margin-top: .75rem;
+  }
+
+  .button {
+    background-color: #4a4a4a;
+    margin-top: 1.625rem;
+    padding: 1.25rem 7.25rem;
+    width: 25.5rem;
+    height: 4rem;
+  }
+}
+
+/* Laptop */
+@media screen and (min-width: 1024px) {
+  #sign-up-section {
+    /* Background Image Height */
+    min-height: 45rem;
+  }
+}
+
+/* Features Section */
+
+.feature:first-child {
+  background-color: rgb(202, 202, 202);
+}
+
+.feature {
+  margin: 0;
+  padding: 1.25rem 1rem 0 1rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.feature .content {
+  padding: 1.25rem 0 1.875rem 0;
+}
+
+.feature .image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature .image-container img {
+  max-width: 85%;
+  display: block;
+}
+.content h2 {
+  color:#4a4a4a;
+  font-size: 1.125rem;
+  line-height: 1.3;
+  font-weight: 400;
+  margin: 0;
+  padding-bottom: .5rem;
+}
+
+.content h3 {
+  color:#4a4a4a;
+  font-size: 0.875rem;
+  font-weight: lighter;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Desktop */
+@media screen and (min-width: 769px) {
+  #features-section {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f3f3f3;
+    gap: 2.375rem;
+    padding: 4rem 5%;
+  }
+
+  .feature .content {
+    padding: 2.5rem 0;
+  }
+
+  .feature:first-child, .feature {
+    background-color: white;
+  }
+
+  .feature .image-container img {
+    max-width: 90%;
+    max-height: 65%;
+  }
+
+  .center .content h2 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    font-weight: bolder;
+  }
+
+  .center .content h3 {
+    font-size: 1rem;
+    font-weight: lighter;
+    line-height: 1.2;
+  }
+}
+
+/* Filters Section */
+
+#filters-section {
+  padding-top: 2rem;
+  background-color: #443f40;
+}
+
+.text {
+  padding: 0 .5rem;
+  margin-bottom: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.text h2 {
+  margin: 0;
+  padding-bottom: .625rem;
+  font-size: 1.125rem;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.text h3 {
+  margin: 0;
+  font-size: .875rem;
+  line-height: 1.4;
+  font-weight: 100;
+}
+
+.images-container {
+  display: flex;
+  width: 100%;
+}
+
+.images-container img {
+  display: block;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+.extra {
+  display: none;
+}
+
+/* Tablet */
+@media screen and (min-width: 426px) {
+  .extra {
+    display: inherit;
+  }
+
+  .text h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+}
+
+/* Laptop */
+@media screen and (min-width: 426px) {
+  .images-container {
+    /* width: 98%; */
+    padding: 0 1% 4rem 1%;
+  }
+
+  .text h2 {
+    font-size: 2.25rem;
+  }
+
+  .text h3 {
+    font-size: 1rem;
+  }
+}
+
+/* Quotes Section */
+
+.quotes-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.quote {
+  font-family: "Palatino-Italic";
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: #4a4a4a;
+}
+
+.quote-citation {
+  margin-top: 1.4rem;
+}
+
+/* Laptop */
+@media screen and (min-width: 769px) {
+  .quotes-center {
+    padding: 5rem 5rem;
+    flex-wrap:nowrap;
+    gap: 1.875rem;
+  }
+
+  .quote {
+    text-align: start;
+  }
+
+  .quote-citation {
+    margin: 0;
+  }
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #9b9b9b;
+  padding: 1.9375rem 1rem;
+}
+
+footer span {
+  font-size: 0.625rem;
+  color: white;
+}
